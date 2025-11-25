@@ -222,52 +222,21 @@ int main() {
     cout << "--------------|--------------|----------------|-------------" << endl;
     cout << "float         | " << setw(12) << bity_mantysy_float 
          << " | " << scientific << setprecision(2) << epsilon_float 
-         << "   | " << fixed << setprecision(0) << cyfry_float << endl;
+         << "       | " << fixed << setprecision(0) << cyfry_float << endl;
     cout << "double        | " << setw(12) << bity_mantysy_double 
          << " | " << scientific << setprecision(2) << epsilon_double 
-         << "  | " << fixed << setprecision(0) << cyfry_double << endl;
+         << "       | " << fixed << setprecision(0) << cyfry_double << endl;
     cout << "long double   | " << setw(12) << bity_mantysy_long 
          << " | " << scientific << setprecision(2) << epsilon_long 
-         << "  | " << fixed << setprecision(0) << cyfry_long << endl;
+         << "       | " << fixed << setprecision(0) << cyfry_long << endl;
     cout << endl;
     
     cout << "WARTOSCI TEORETYCZNE (IEEE 754):" << endl;
-    cout << "float:       23 bity mantysy, eps = 2^(-23) ≈ 1.19e-07,  ~7 cyfr" << endl;
-    cout << "double:      52 bity mantysy, eps = 2^(-52) ≈ 2.22e-16, ~16 cyfr" << endl;
-    cout << "long double: 63 bity mantysy, eps = 2^(-63) ≈ 1.08e-19, ~19 cyfr" << endl;
-    cout << "(long double moze byc rozne na roznych platformach!)" << endl;
+    cout << "float:       23 bity mantysy, eps = 2^(-23) ~ 1.19e-07,  ~7 cyfr" << endl;
+    cout << "double:      52 bity mantysy, eps = 2^(-52) ~ 2.22e-16, ~16 cyfr" << endl;
+    cout << "long double: 63 bity mantysy, eps = 2^(-63) ~ 1.08e-19, ~19 cyfr" << endl;
     cout << endl;
-    
-    /*
-    ========================================================================
-    CZĘŚĆ 5: WERYFIKACJA - CZY EPSILON DZIAŁA?
-    ========================================================================
-    
-    Sprawdzamy czy rzeczywiście:
-    - (1 + epsilon) > 1         --> PRAWDA
-    - (1 + epsilon/2) == 1      --> PRAWDA (epsilon/2 jest "niewidoczny")
-    */
-    
-    cout << "============================================================" << endl;
-    cout << "WERYFIKACJA POPRAWNOSCI WYNIKOW" << endl;
-    cout << "============================================================" << endl;
-    cout << endl;
-    
-    cout << "Dla DOUBLE:" << endl;
-    cout << "(1 + epsilon) > 1 ?       ";
-    if ((1.0 + epsilon_double) > 1.0) {
-        cout << "TAK (poprawnie!)" << endl;
-    } else {
-        cout << "NIE (blad!)" << endl;
-    }
-    
-    cout << "(1 + epsilon/2) == 1 ?    ";
-    if ((1.0 + epsilon_double/2.0) == 1.0) {
-        cout << "TAK (poprawnie! - polowa epsilon jest niewidoczna)" << endl;
-    } else {
-        cout << "NIE (epsilon jest za duzy)" << endl;
-    }
-    
+
     cout << endl;
     cout << "============================================================" << endl;
     cout << "KONIEC PROGRAMU" << endl;
