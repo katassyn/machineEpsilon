@@ -103,7 +103,7 @@ int main() {
     */
     
     cout << " " << endl;
-    cout << "LONG DOUBLE (80+ bitow, zalezy od platformy)" << endl;
+    cout << "LONG DOUBLE (80 bitow)" << endl;
     
     long double epsilon_long = 1.0L;
     int bity_mantysy_long = 0;
